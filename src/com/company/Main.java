@@ -20,5 +20,23 @@ public class Main {
        System.out.println(is_happy);
        String str = "Hello Word!!!";
        System.out.println(str);
+	    
+       int [] arr = new int [10];
+       for (int k = 0; k <arr.length; k++)
+       	   arr[k] = (int)(Math.random()*100);
+       System.out.println("Исходный массив");
+       for (int k = 0; k <arr.length; k++)
+       	   System.out.println(arr[k]);
+       int tmp;
+       for (int k = 0; k <arr.length; k++)
+       	  for (int j = k+1; j <arr.length; j++)
+       	  	  if (arr[k] < arr[j]) {
+       	  	  	  tmp = arr[j];
+       	  	  	  arr[j] = arr[k];
+       	  	  	  arr[k] = tmp;
+       	  	  }
+       System.out.println("Отсортированный массив");
+       for (int k = 0; k <arr.length; k++)
+          System.out.println(arr[k]);
     }
 }
